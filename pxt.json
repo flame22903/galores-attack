@@ -2,7 +2,8 @@
     "name": "galore´s attack",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.3.1"
     },
     "files": [
         "main.blocks",
