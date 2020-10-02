@@ -41,12 +41,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.ultra_enemy, function (sprite, otherSprite) {
     projectile.destroy(effects.spray, 200)
-    disparos += 1
-    if (disparos > 5) {
-        regigos.destroy(effects.disintegrate, 2000)
-        info.changeScoreBy(10)
-        derrotas += 1
-    }
+    regigos.destroy(effects.disintegrate, 2000)
+    info.changeScoreBy(10)
+    derrotas += 1
 })
 controller.B.onEvent(ControllerButtonEvent.Released, function () {
     if (info.score() < 60) {
@@ -104,12 +101,13 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.super_enemy, function (sprite, o
 let galore: Sprite = null
 let dolers: Sprite = null
 let galore_mothership: Sprite = null
+let disparos = 0
 let projectile2: Sprite = null
 let regigos: Sprite = null
-let disparos = 0
 let projectile: Sprite = null
 let PROTAGONISTA: Sprite = null
 let derrotas = 0
+effects.starField.startScreenEffect()
 scene.setBackgroundImage(img`
     fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff11111111111111111111111111111111111
     fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff11111111111111111111111111111111111
@@ -358,7 +356,7 @@ game.onUpdateInterval(200, function () {
             . . . . e d e . . . . . . . 2 2 
             . . . . d e . . . . . . . . . 2 
             `, SpriteKind.ultra_enemy)
-        regigos.setVelocity(-40, 0)
+        regigos.setVelocity(-35, 0)
         regigos.setPosition(160, randint(0, 120))
     }
 })
