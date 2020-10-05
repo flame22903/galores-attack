@@ -324,11 +324,6 @@ game.onUpdateInterval(1000, function () {
     }
 })
 forever(function () {
-    if (derrotas == 80) {
-        derrotas = 200
-    }
-})
-forever(function () {
     music.playMelody("B A G A B G E F ", 120)
 })
 forever(function () {
@@ -358,7 +353,7 @@ forever(function () {
     }
 })
 forever(function () {
-    if (derrotas >= 200) {
+    if (derrotas >= 199) {
         planet_of_garoles = sprites.create(img`
             . . 6 c c 6 6 9 9 9 9 9 9 9 . . 
             . 6 6 6 6 6 6 6 9 9 9 9 9 9 9 . 
