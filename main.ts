@@ -126,6 +126,7 @@ let redibles: Sprite = null
 let projectile: Sprite = null
 let PROTAGONISTA: Sprite = null
 let derrotas = 0
+game.splash("galore´s attack", "by flame22903")
 effects.starField.startScreenEffect()
 scene.setBackgroundImage(img`
     fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff11111111111111111111111111111111111
